@@ -19,7 +19,7 @@
                     <ais-stats/>
                 </p>
             </div>
-            <ais-results :stack="false">
+            <ais-results :stack="true">
                 <template slot-scope="{ result }">
                     <div class="box search-result">
                         <h5 class="title is-5 is-marginless">
@@ -33,9 +33,7 @@
                 </template>
             </ais-results>
 
-            <p><br>
-                <button class="button is-success" @click="loadMore">load more</button>
-            </p>
+            <div id="loadmore"></div>
 
         </ais-index>
     </div>
@@ -43,6 +41,7 @@
 
 <script>
     import Config from '~/config'
+    import ScrollMonitor from 'scrollmonitor'
 
     export default {
 
@@ -81,24 +80,16 @@
                 this.page++;
             },
         },
+
+        mounted() {
+            let e = document.getElementById('loadmore')
+            let w = ScrollMonitor.create(e)
+            w.enterViewport(() => {
+                this.loadMore()
+            })
+        }
     }
 </script>
 
 <style scoped>
-    .search-input {
-        margin-bottom: 20px;
-        padding-left: 4px;
-        border: solid #ccc 1px;
-        border-radius: 5px;
-        font-size: 20px;
-    }
-
-    .highlight-terms em {
-        font-style: normal;
-    }
-
-    .resource-link {
-        text-transform: lowercase;
-        margin-left: 0px;
-    }
 </style>
