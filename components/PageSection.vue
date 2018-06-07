@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <section class="section">
-      <div class="container">
-        <div class="content">
-          <slot></slot>
-        </div>
-      </div>
-    </section>
-  </div>
+    <div>
+        <section class="section">
+            <div class="container">
+                <div class="content">
+                    <slot></slot>
+                </div>
+            </div>
+        </section>
+    </div>
 </template>
 
 <script>
@@ -17,5 +17,4 @@
 </script>
 
 <style scoped>
-
 </style>
