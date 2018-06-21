@@ -57,6 +57,12 @@ module.exports = {
         }
     },
 
+  env: {
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID || "MZQPVRPXFY",
+    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY || "b2870abe304ad95866629a6713fd6e91",
+    ALGOLIA_RESOURCES_INDEX: process.env.ALGOLIA_RESOURCES_INDEX || "mappcpd_demo_RESOURCES",
+  },
+
   /*
   ** You can extend webpack config here
   */
