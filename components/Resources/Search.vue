@@ -49,7 +49,6 @@
 </template>
 
 <script>
-  import Config from '~/config'
   import ScrollMonitor from 'scrollmonitor'
 
   export default {
